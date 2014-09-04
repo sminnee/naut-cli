@@ -1,0 +1,17 @@
+{
+    "name": "sminnee/naut-cli",
+    "description": "Command-line tool for interacting with a Deploynaut server",
+    "require": {
+        "symfony/console": "~2.3"
+    },
+    "license": "BSD-3-Clause",
+    "autoload": {
+        "psr-0": { "SilverStripe\\Deploynaut\\Console": "src/" }
+    },
+    "authors": [
+        {
+            "name": "Sam Minnee",
+            "email": "sam@silverstripe.com"
+        }
+    ]
+}

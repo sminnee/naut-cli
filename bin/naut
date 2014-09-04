@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+require(__DIR__ . '/../vendor/autoload.php');
+
+//namespace SilverStripe\NautCLI;
+
+/**
+ * Naut CLI tool - pull in several commands based on the Symfony console library
+ */
+
+use Symfony\Component\Console\Application;
+use SilverStripe\Deploynaut\Console as Naut;
+
+$application = new Application();
+$application->setName("Deploynaut CLI");
+$application->setVersion("pre-0.1");
+
+$application->add(new Naut\ProjectsCommand);
+$application->add(new Naut\EnvironmentsCommand);
+$application->add(new Naut\DeployCommand);
+
+$application->run();
