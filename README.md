@@ -8,8 +8,8 @@ Usage
 
 First, create `~/.naut` with the following information:
 
-    NAUT_SERVER=http://deploy.example.com
-    NAUT_AUTH=username:password
+    server=http://deploy.example.com
+    auth=username:password
 
 
 Then you can run a number of naut commands:
