@@ -2,7 +2,8 @@
     "name": "sminnee/naut-cli",
     "description": "Command-line tool for interacting with a Deploynaut server",
     "require": {
-        "symfony/console": "~2.3"
+        "symfony/console": "~2.3",
+        "curl/curl": "~1.1"
     },
     "license": "BSD-3-Clause",
     "autoload": {
