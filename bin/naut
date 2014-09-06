@@ -1,7 +1,10 @@
 #!/usr/bin/env php
 <?php
 
-require(__DIR__ . '/../vendor/autoload.php');
+// Root from which to refer to src/
+if(!defined('PACKAGE_ROOT')) define('PACKAGE_ROOT', dirname(dirname(__FILE__)) . '/');
+
+require(PACKAGE_ROOT . 'vendor/autoload.php');
 
 //namespace SilverStripe\NautCLI;
 

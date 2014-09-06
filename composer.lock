@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1673762e71f003f83486d05eb64b6135",
+    "hash": "a2ad95cffa5aa18bfece36cf5254f44d",
     "packages": [
         {
             "name": "curl/curl",
@@ -115,10 +115,96 @@
             "time": "2014-08-14 16:10:54"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "sminnee/pharout",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sminnee/pharout.git",
+                "reference": "340c92af4a68d520efc39d6832d4c0c93bd2dfda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sminnee/pharout/zipball/340c92af4a68d520efc39d6832d4c0c93bd2dfda",
+                "reference": "340c92af4a68d520efc39d6832d4c0c93bd2dfda",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/finder": "~2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SilverStripe\\PharOut": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Minnee",
+                    "email": "sam@silverstripe.com"
+                }
+            ],
+            "description": "Phar compiler for PHP CLI tools. Derived from Composer's compile script.",
+            "time": "2014-09-05 04:31:45"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v2.5.4",
+            "target-dir": "Symfony/Component/Finder",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Finder.git",
+                "reference": "f40854d1a19c339c7f969f8f6d6d6e9153311c4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/f40854d1a19c339c7f969f8f6d6d6e9153311c4c",
+                "reference": "f40854d1a19c339c7f969f8f6d6d6e9153311c4c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Finder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-09-03 09:00:14"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "sminnee/pharout": 20
+    },
     "prefer-stable": false,
     "platform": [],
     "platform-dev": []
