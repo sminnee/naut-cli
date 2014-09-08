@@ -22,5 +22,6 @@ $application->setVersion("pre-0.1");
 $application->add(new Naut\ProjectsCommand);
 $application->add(new Naut\EnvironmentsCommand);
 $application->add(new Naut\DeployCommand);
+$application->add(new Naut\RefreshVCSCommand);
 
 $application->run();

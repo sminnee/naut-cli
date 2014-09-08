@@ -161,12 +161,17 @@ class NautAPIClient {
 		$subURL = str_replace($this->baseURL,"",$json["href"]);
 
 		return new NautAPIJob($this, $subURL);
+	}
 
-		$result = array();
-		foreach($json['environments'] as $row) {
-			$result[] = $row['name'];
-		}
-		return $result;
+	/** 
+	 * Deploy the given SHA to the given environment in the given project
+	 */
+	function refreshVCS($project) {
+		$json = $this->postJSON("$project/fetch", array());
+
+		$subURL = str_replace($this->baseURL,"",$json["href"]);
+
+		return new NautAPIJob($this, $subURL);
 	}
 
 }

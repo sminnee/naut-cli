@@ -8,18 +8,14 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class DeployCommand extends Command {
+class RefreshVCSCommand extends Command {
 	
 	protected function configure() {
-		$this->setName('deploy')
-			->setDescription('Deploy the given SHA to the given project on the given environment')
+		$this->setName('refresh-vcs')
+			->setDescription('Refresh the local cache of the code repository for the given project')
 			->setDefinition(array(
 				new InputArgument('project', InputArgument::REQUIRED,
-					'The project to deploy'),
-				new InputArgument('environment', InputArgument::REQUIRED,
-					'The environment to deploy to'),
-				new InputArgument('sha', InputArgument::REQUIRED,
-					'The SHA to deploy'),
+					'The project to refresh'),
 
 				new InputOption('server', 's', InputOption::VALUE_REQUIRED,
 					'The deploynaut server URL'),
@@ -35,9 +31,8 @@ class DeployCommand extends Command {
 		$args = $input->getArguments();
 
 		// Deploy deployment
-		$output->writeln("Deploying {$args['sha']} to {$args['environment']} on {$args['project']}...");
-		$status = $naut->deploy($args['project'], $args['environment'], $args['sha']);
-
+		$output->writeln("Refreshing the repository for {$args['project']}...");
+		$status = $naut->refreshVCS($args['project']);
 
 		$output->write("Queued");
 

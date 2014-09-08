@@ -12,7 +12,7 @@ class EnvironmentsCommand extends Command {
 	
 	protected function configure() {
 		$this->setName('envs')
-			->setDescription('Return a list of environment names for the given project, 1 per line.')
+			->setDescription('Return a list of environment names for the given project, 1 per line')
 			->setDefinition(array(
 				new InputArgument('project', InputArgument::REQUIRED,
 					'The project to list environments for'),

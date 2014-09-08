@@ -22,6 +22,10 @@ Return a list of project names, 1 per line
 
 Return a list of environment names for the given project, 1 per line.
 
-### `naut deploy <project>:<env> <sha>`
+### `naut refresh-vcs <project>`
+
+Refresh the local cache of the code repository for the given project.
+
+### `naut deploy <project> <env> <sha>`
 
 Deploy the given SHA to the given project on the given environment.
