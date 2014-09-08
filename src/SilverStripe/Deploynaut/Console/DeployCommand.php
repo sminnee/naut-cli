@@ -60,8 +60,8 @@ class DeployCommand extends Command {
 
 			}
 
-			if($data['status'] == 'Failed') throw new \LogicException("Deployment failed");
-			if($data['status'] == 'Finished') break;
+			if($data['status'] == 'Failed' || $data['status'] == 'Invalid') throw new \LogicException("Deployment failed");
+			if($data['status'] == 'Complete') break;
 		}
 
 		$output->writeln("Finished!");
