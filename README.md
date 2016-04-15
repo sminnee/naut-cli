@@ -1,6 +1,8 @@
 naut: Deploynaut CLI tool
 =========================
 
+[![Build Status](https://travis-ci.org/sminnee/naut-cli.svg?branch=master)](https://travis-ci.org/sminnee/naut-cli)
+
 The `naut` package is a simple CLI tool for interacting with a Deploynaut server
 
 Usage
@@ -36,7 +38,7 @@ These commands haven't been implemented yet...
 
 ### `naut envs <project> --full`
 
-Returns more details about 
+Returns more details about
 
  * Environment name
  * Currently deployed SHA
@@ -61,7 +63,7 @@ Returns a list of deployments to the given envrionment, listing the following da
 
 For example:
 
-    2981 Finished 2014-05-2014 14:30 4a489d9bd8878fd33e3e7aa303ad792b1b1df927 someone@example.com 
+    2981 Finished 2014-05-2014 14:30 4a489d9bd8878fd33e3e7aa303ad792b1b1df927 someone@example.com
 
 There is an optional argument, `--limit <num>` to limit the number of rows returned.
 
@@ -75,7 +77,7 @@ Return all the branches in the given project, 1 per line.
 
 ### `naut branches <project> --full`
 
-Returns full details about 
+Returns full details about
 
  * Branch name
  * Last-update date
