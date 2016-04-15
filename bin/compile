@@ -7,14 +7,14 @@ require($projectPath . '/vendor/autoload.php');
 // Compiler configuration
 $compiler = new SilverStripe\PharOut\Compiler();
 $compiler
-	->forProjectAt($projectPath)
-	->withExecutable("bin/naut")
-	->withSourcePath("src")
-	->withComposerPackages(array(
-		"symfony/console",
-		"curl/curl",
-	))
-	->withInternalMessage("Naut CLI (c) 2014 SilverStripe Limited")
+    ->forProjectAt($projectPath)
+    ->withExecutable("bin/naut")
+    ->withSourcePath("src")
+    ->withComposerPackages(array(
+        "symfony/console",
+        "curl/curl",
+    ))
+    ->withInternalMessage("Naut CLI (c) 2014 SilverStripe Limited")
 ;
 
 $compiler->writePhar("naut.phar");

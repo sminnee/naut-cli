@@ -7,18 +7,18 @@ namespace SilverStripe\Deploynaut\Console;
  */
 class NautAPIJob {
 
-	protected $apiClient;
+    protected $apiClient;
 
-	protected $suburl;
+    protected $suburl;
 
 
-	function __construct(NautAPIClient $apiClient, $suburl) {
-		$this->apiClient = $apiClient;
-		$this->suburl = $suburl;
-	}
+    function __construct(NautAPIClient $apiClient, $suburl) {
+        $this->apiClient = $apiClient;
+        $this->suburl = $suburl;
+    }
 
-	function getStatus() {
-		return $this->apiClient->getJSON($this->suburl);
-	}
+    function getStatus() {
+        return $this->apiClient->getJSON($this->suburl);
+    }
 
 }
