@@ -47,12 +47,12 @@ class NautAPIClient {
 		// Process "server" option
 		if($options['server']) {
 			$server = $options['server'];
-			if(!preg_match('#^[a-z+]://#', $server)) $server = "http://$server";
+			if(!preg_match('#^[a-z]+://#', $server)) $server = "http://$server";
 			if(substr($server,-1) != '/') $server .= "/";
 			$this->baseURL = $server . 'naut/api/';
 		}
 
-		// Process "auth" option
+		// Process "auth" options
 		if($options['auth']) {
 			$this->auth = $options['auth'];
 		}
